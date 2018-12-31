@@ -11,7 +11,8 @@ html {
 
 body {
   overflow-x: hidden;
-  background: url(../images/bg.jpg) no-repeat left;
+  background: url(../images/bg.jpg) no-repeat center;
+  background-size: cover;
   background-attachment: fixed; }
 
 .box {
