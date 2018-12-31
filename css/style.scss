@@ -16,6 +16,7 @@ body{
 	overflow-y: hidden;
 	background:url(../images/bg.jpg) no-repeat;
 	background-size:cover;
+	background-attachment: fixed;
 }
 
 .box{
@@ -93,6 +94,31 @@ body{
 	background-size: 114px 45px;
 }
 
+.text9{
+	@extend .text;
+	background: url(../images/9.png) no-repeat;
+	background-size: 181px 45px;
+}
+
+.text10{
+	@extend .text;
+	background: url(../images/10.png) no-repeat;
+	background-size: 199px 45px;
+}
+
+.text11{
+	@extend .text;
+	background: url(../images/11.png) no-repeat;
+	background-size: 140px 45px;
+}
+
+.text12{
+	@extend .text;
+	background: url(../images/12.png) no-repeat;
+	background-size: 106px 45px;
+	margin-bottom: 200px;
+}
+
 #play{
 	@extend .text;
 	background: url(../images/play.png) no-repeat;
@@ -103,11 +129,11 @@ body{
 }
 
 .box_music{
-	height: 200px;
+	height: 80px;
 }
 
 .music{
-	margin-left: 70px;
+	margin-left: 56px;
 	width: 200px;
 	height: 80px;
 	border-radius:20px;

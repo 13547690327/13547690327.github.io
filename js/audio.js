@@ -20,7 +20,7 @@ function draw() {
 
   analyser.getByteTimeDomainData(dataArray);
 
-        var gradient =   canvasCtx.createLinearGradient(150, 200, 200, 50);
+        var gradient =   canvasCtx.createLinearGradient(50, 150, 150, 50);
         gradient.addColorStop(0, '#00ff00');
         gradient.addColorStop(0.5, '#ffff00');
         gradient.addColorStop(1, '#ff0000');
