@@ -93,6 +93,15 @@ body{
 	background-size: 114px 45px;
 }
 
+#play{
+	@extend .text;
+	background: url(../images/play.png) no-repeat;
+	background-size: 32px 32px;
+	position:absolute;
+	top:6.5px;
+	margin-left: 174px;
+}
+
 .box_music{
 	height: 200px;
 	opacity: 1
@@ -104,13 +113,11 @@ body{
 	height: 80px;
 	border-radius:20px;
 	background:white;
-	padding-top: 20px;
-	padding-left: 15px;
 }	
-
 
 #canvas{
 	width: 180px;
 	height: 40px;
-	border:1px solid blue;
+	margin-top: 20px;
+	margin-left: 10px;
 }
