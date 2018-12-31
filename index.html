@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width =device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+	<title></title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<style>
+body{background: gray;}
+
+
+</style>
+<body>
+	<div style="height: 1800px">
+<div class="top">
+	<div id="name">oldchin</div>
+	<div id="oldchin">在线</div>
+</div>
+<div class="box" id="a">
+	<div class="me"></div>
+	<div class="text"></div>
+</div>
+
+<div class="box" id="b">
+	<div class="me"></div>
+	<div class="text"></div>
+</div>
+
+<div class="box" id="c">
+	<div class="me"></div>
+	<div class="text"></div>
+</div>
+
+<div class="box" id="d">
+	<div class="me"></div>
+	<div class="text"></div>
+</div>
+
+<div class="box" id="e">
+	<div class="me"></div>
+	<div class="text"></div>
+</div>
+
+<div class="box" id="f">
+	<div class="me"></div>
+	<div class="text"></div>
+</div>
+
+<div class="box" id="g">
+	<div class="me"></div>
+	<div class="text"></div>
+</div>
+
+<div class="box" id="h">
+	<div class="me"></div>
+	<div class="text"></div>
+</div>
+
+<div class="choice" id="choice">
+	<button id="aa">年少有为</button>
+	<button id="bb">7 years</button>
+</div>
+
+<div class="box box_music">
+	<div class="me"></div>
+	<div class="music">
+		<audio id="aaa" src="audio/7years.mp3" controls="controls"></audio>
+		<audio id="bbb" src="audio/年少有为.mp3" controls="controls"></audio>
+		<canvas id="canvas"></canvas>
+	</div>
+</div>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/audio.js"></script>
+<script>
+$(function(){
+
+        $('#a').animate({opacity:"1"},2000,
+        	function() {
+        	    $('#b').delay(1000).animate({opacity:"1"},1200,
+        	    	function() {	
+        	    		 $('#c').delay(1000).animate({opacity:"1"},1200,
+        	    		 	function() {
+        	    		 		$('#d').delay(1000).animate({opacity:"1"},1200,
+        	    		 			function() {
+        	    		 				$('#e').delay(1000).animate({opacity:"1"},1200,
+        	    		 					function(){
+        	    		 						$('#f').delay(1000).animate({opacity:"1"},1200,
+        	    		 							function() {
+        	    		 								$('#g').delay(1000).animate({opacity:"1"},1200,
+        	    		 									function() {
+        	    		 										$('#h').delay(1000).animate({opacity:"1"},1200,);
+        	    		 										$('#choice').delay(1200).animate({opacity:"1"},1200,);
+
+        	    		 									});
+        	    		 							});
+        	    		 					});
+        	    		 			});
+        	    		 	});
+        	    	});
+        	});
+
+		 
+
+		 
+
+
+
+        
+  
+   
+
+})
+</script>
+</body>
+</html>
+
+ $('html,body').animate({scrollTop:$('#c').offset().top});
