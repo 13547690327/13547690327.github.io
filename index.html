@@ -57,16 +57,10 @@ body{background: gray;}
 	<div class="text"></div>
 </div>
 
-<div class="choice" id="choice">
-	<button id="aa">年少有为</button>
-	<button id="bb">7 years</button>
-</div>
-
-<div class="box box_music">
+<div class="box box_music" id="i">
 	<div class="me"></div>
 	<div class="music">
 		<audio id="aaa" src="audio/7years.mp3" controls="controls"></audio>
-		<audio id="bbb" src="audio/年少有为.mp3" controls="controls"></audio>
 		<canvas id="canvas"></canvas>
 	</div>
 </div>
@@ -85,17 +79,20 @@ $(function(){
         	    		 	function() {
         	    		 		$('#d').delay(1000).animate({opacity:"1"},1200,
         	    		 			function() {
+        	    		 				$('html,body').animate({scrollTop:$('#e').offset().top});
         	    		 				$('#e').delay(1000).animate({opacity:"1"},1200,
         	    		 					function(){
         	    		 						$('#f').delay(1000).animate({opacity:"1"},1200,
         	    		 							function() {
-        	    		 								$('html,body').animate({scrollTop:$('#e').offset().top});
         	    		 								$('#g').delay(1000).animate({opacity:"1"},1200,
         	    		 									function() {
         	    		 										$('#h').delay(1000).animate({opacity:"1"},1200,
         	    		 											function() {
         	    		 												$('html,body').animate({scrollTop:$('#h').offset().top});
-        	    		 												$('#choice').delay(1200).animate({opacity:"1"},1200,);
+        	    		 												$('#i').delay(1000).animate({opacity:"1"},1200,
+        	    		 													function() {
+        	    		 														$('#aaa').paly()
+      	    		 													   });
         	    		 											});
 
         	    		 									});

@@ -1,26 +1,19 @@
-var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
-var audioa = document.getElementById('aaa');
-var audiob = document.getElementById('bbb');
+var audioCtx =  window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
+var audio = document.getElementById('aaa');
 var analyser = audioCtx.createAnalyser();
 
-var arr = ["audioa","audiob"];
-
-
-    var audioSrc = audioCtx.createMediaElementSource(audioa);
-
+    var audioSrc = audioCtx.createMediaElementSource(audio);
   
     audioSrc.connect(analyser);
     analyser.connect(audioCtx.destination);
-analyser.fftSize = 1024;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+    analyser.fftSize = 1024;
+    var bufferLength = analyser.frequencyBinCount;
+    var dataArray = new Uint8Array(bufferLength);
+    analyser.getByteTimeDomainData(dataArray);
 
-// 获取ID为 "oscilloscope" 的画布
-var canvas = document.getElementById("canvas");
-var canvasCtx = canvas.getContext("2d");
+    var canvas = document.getElementById("canvas");
+    var canvasCtx = canvas.getContext("2d");
 
-// 绘制一个当前音频源的示波器
 
 function draw() {
 
