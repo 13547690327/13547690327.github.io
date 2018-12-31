@@ -89,10 +89,14 @@ $(function(){
         	    		 					function(){
         	    		 						$('#f').delay(1000).animate({opacity:"1"},1200,
         	    		 							function() {
+        	    		 								$('html,body').animate({scrollTop:$('#e').offset().top});
         	    		 								$('#g').delay(1000).animate({opacity:"1"},1200,
         	    		 									function() {
-        	    		 										$('#h').delay(1000).animate({opacity:"1"},1200,);
-        	    		 										$('#choice').delay(1200).animate({opacity:"1"},1200,);
+        	    		 										$('#h').delay(1000).animate({opacity:"1"},1200,
+        	    		 											function() {
+        	    		 												$('html,body').animate({scrollTop:$('#h').offset().top});
+        	    		 												$('#choice').delay(1200).animate({opacity:"1"},1200,);
+        	    		 											});
 
         	    		 									});
         	    		 							});
@@ -117,4 +121,3 @@ $(function(){
 </body>
 </html>
 
- $('html,body').animate({scrollTop:$('#c').offset().top});
