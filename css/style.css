@@ -11,27 +11,20 @@ html {
 
 body {
   overflow-x: hidden;
-  overflow-y: hidden; }
-
-.top {
-  width: 100%;
-  height: 50px;
-  background: blue;
-  text-align: center; }
-  .top #name {
-    color: white;
-    font-size: 22px; }
-  .top #oldchin {
-    color: white;
-    font-size: 12px; }
+  overflow-y: hidden;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover; }
 
 .box {
   width: 100%;
-  height: 60px;
+  height: 45px;
   margin-top: 20px;
   display: block;
   opacity: 0;
   position: relative; }
+
+.box_1 {
+  margin-top: 40px; }
 
 .me {
   width: 40px;
@@ -51,8 +44,7 @@ body {
 
 .box_music {
   height: 200px;
-  opacity: 1;
-  margin: 0 auto; }
+  opacity: 1; }
 
 .music {
   margin-left: 70px;
@@ -64,7 +56,6 @@ body {
   padding-left: 10px; }
 
 #canvas {
-  margin: 0 auto;
   width: 180px;
   height: 40px;
   border: 1px solid blue; }
