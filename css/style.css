@@ -11,21 +11,19 @@ html {
 
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
-  background: url(../images/bg.jpg) no-repeat;
-  background-size: cover;
+  background: url(../images/bg.jpg) no-repeat left;
   background-attachment: fixed; }
 
 .box {
   width: 100%;
   height: 45px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   display: block;
   opacity: 0;
   position: relative; }
 
 .box_1 {
-  margin-top: 40px; }
+  margin-top: 60px; }
 
 .me {
   width: 40px;

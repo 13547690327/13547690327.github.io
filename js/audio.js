@@ -6,7 +6,7 @@ var analyser = audioCtx.createAnalyser();
     analyser.connect(audioCtx.destination);
 // ...
 
-analyser.fftSize = 1024;
+analyser.fftSize = 512;
 var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
