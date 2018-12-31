@@ -49,6 +49,50 @@ body{
 	margin-left: 50px;
 }
 
+.text1{
+	@extend .text;
+	background-size: 74px 45px;
+}
+
+.text2{
+	@extend .text;
+	background: url(../images/2.png) no-repeat;
+	background-size: 149px 45px;
+}
+
+.text3{
+	@extend .text;
+	background: url(../images/3.png) no-repeat;
+	background-size: 186px 45px;
+}
+.text4{
+	@extend .text;
+	background: url(../images/4.png) no-repeat;
+	background-size: 197px 45px;
+}
+.text5{
+	@extend .text;
+	background: url(../images/5.png) no-repeat;
+	background-size: 92px 45px;
+}
+.text6{
+	@extend .text;
+	background: url(../images/6.png) no-repeat;
+	background-size: 110px 45px;
+}
+
+.text7{
+	@extend .text;
+	background: url(../images/7.png) no-repeat;
+	background-size: 147px 45px;
+}
+
+.text8{
+	@extend .text;
+	background: url(../images/8.png) no-repeat;
+	background-size: 114px 45px;
+}
+
 .box_music{
 	height: 200px;
 	opacity: 1
@@ -61,7 +105,7 @@ body{
 	border-radius:20px;
 	background:white;
 	padding-top: 20px;
-	padding-left: 10px;
+	padding-left: 15px;
 }	
 
 

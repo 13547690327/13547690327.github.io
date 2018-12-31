@@ -35,12 +35,43 @@ body {
   position: absolute;
   margin-left: 8px; }
 
-.text {
+.text, .text1, .text2, .text3, .text4, .text5, .text6, .text7, .text8 {
   width: 100%;
   height: 100%;
   background: url(../images/1.png) no-repeat;
   background-size: 64px 45px;
   margin-left: 50px; }
+
+.text1 {
+  background-size: 74px 45px; }
+
+.text2 {
+  background: url(../images/2.png) no-repeat;
+  background-size: 149px 45px; }
+
+.text3 {
+  background: url(../images/3.png) no-repeat;
+  background-size: 186px 45px; }
+
+.text4 {
+  background: url(../images/4.png) no-repeat;
+  background-size: 197px 45px; }
+
+.text5 {
+  background: url(../images/5.png) no-repeat;
+  background-size: 92px 45px; }
+
+.text6 {
+  background: url(../images/6.png) no-repeat;
+  background-size: 110px 45px; }
+
+.text7 {
+  background: url(../images/7.png) no-repeat;
+  background-size: 147px 45px; }
+
+.text8 {
+  background: url(../images/8.png) no-repeat;
+  background-size: 114px 45px; }
 
 .box_music {
   height: 200px;
@@ -53,7 +84,7 @@ body {
   border-radius: 20px;
   background: white;
   padding-top: 20px;
-  padding-left: 10px; }
+  padding-left: 15px; }
 
 #canvas {
   width: 180px;
