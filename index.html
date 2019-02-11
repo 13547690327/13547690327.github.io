@@ -27,8 +27,12 @@
         </div>
         <div class="swiper-slide blue">
             <section id="swiper_2_bg">
-                <audio id="audio" controls src="audio/loser.mp3" played="played"></audio>
+                <audio id="audio" src="audio/loser.mp3"></audio>
                 <canvas width="300" height="300" id="canvas"></canvas>
+                <div>
+                    <img id="music_kz" src="images/swiper_2/play.png">
+                </div>
+                <section id="aa"></section>
             </section>
         	
 
@@ -38,7 +42,7 @@
     var canvas = document.getElementById("canvas");
     var cxt = canvas.getContext("2d");
     //获取API
-    var AudioContext = AudioContext || webkitAudioContext;
+    var AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
     var context = new AudioContext;
     //加载媒体
     var audio = document.getElementById("audio");
@@ -55,14 +59,14 @@
         cxt.clearRect(0, 0, canvas.width, canvas.height);
         //画线条
         for (var i = 0; i < 360; i++) {
-            var value = output[i] / 8;//<===获取数据
+            var value = output[i] / 14;//<===获取数据
             cxt.beginPath();
-            cxt.lineWidth = 2;
+            cxt.lineWidth = 3;
             cxt.strokeStyle = "white";
 
             cxt.moveTo(150, 150);
             //R * cos (PI/180*一次旋转的角度数) ,-R * sin (PI/180*一次旋转的角度数)
-            cxt.lineTo(Math.cos((i * 1) / 80 * Math.PI) * (100 + value) + 150, (- Math.sin((i * 1) / 80 * Math.PI) * (100 + value) + 150));
+            cxt.lineTo(Math.cos((i * 1) / 70 * Math.PI) * (100 + value) + 150, (- Math.sin((i * 1) / 70 * Math.PI) * (100 + value) + 150));
             cxt.stroke();
         }
         //画一个小圆，将线条覆盖
@@ -72,15 +76,28 @@
 
         var img = new Image();
         img.src = "images/swiper_2/loser.png";
-        var a=document.getElementById("logo");
+        
         var pat=cxt.createPattern(img,"no-repeat");
         cxt.fillStyle = pat;   
-
         cxt.stroke();
         cxt.fill();
         //请求下一帧
         requestAnimationFrame(drawSpectrum);
+
+          
     })();
+
+    music_kz.addEventListener("click", function(){
+       if (this.getAttribute("src",2) == ("images/swiper_2/play.png")) {
+            this.src = "images/swiper_2/pause.png";
+            audio.play();
+        }
+        else{
+            this.src = "images/swiper_2/play.png";
+            audio.pause();
+        }
+    });
+
 </script>
 
         </div>

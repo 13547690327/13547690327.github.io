@@ -8,6 +8,16 @@ html{
 	overflow-y: hidden; 
 }
 
+@keyframes music{
+	0%{
+		transform: rotate(0deg);
+	}
+
+    100% {
+       transform:rotate(35640deg);
+	}
+}
+
 
 .swiper-container{
  	width: 100vw;
@@ -32,7 +42,7 @@ html{
 }
 
 .red{
-	background: red;
+	background: #aa171c;
 	section{
 		img{
 			position:absolute;
@@ -69,20 +79,36 @@ html{
 }
 
 #canvas{
-	margin: 20% auto;
+	margin: 0 auto;
     display: block;
+    padding-top:35%;
+    padding-bottom: 20%;
 }
 
 
 .blue{
+
 	#swiper_2_bg{
 		width: 100%;
-		height: auto;
-		background:url("../images/swiper_2/bg.jpg");
-
+		height: 100%;
+		background:url("../images/swiper_2/bg.jpg"); 
 	}
 
+	div{
+		text-align: center;
+
+	}
+	
+
 }
+.music_xz{
+
+
+			zoom:150%;
+			animation: music 300s;
+			animation-iteration-count:infinite;
+			animation-timing-function:linear;
+		}
 
 .green{
 	background: green

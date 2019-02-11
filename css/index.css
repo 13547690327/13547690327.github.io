@@ -6,6 +6,11 @@ html {
   overflow-x: hidden;
   overflow-y: hidden; }
 
+@keyframes music {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(35640deg); } }
 .swiper-container {
   width: 100vw;
   height: 100vh; }
@@ -20,7 +25,7 @@ html {
   padding-top: 15%; }
 
 .red {
-  background: red; }
+  background: #aa171c; }
   .red section img {
     position: absolute;
     width: 150%;
@@ -47,13 +52,23 @@ html {
       opacity: 0; }
 
 #canvas {
-  margin: 20% auto;
-  display: block; }
+  margin: 0 auto;
+  display: block;
+  padding-top: 35%;
+  padding-bottom: 20%; }
 
 .blue #swiper_2_bg {
   width: 100%;
-  height: auto;
+  height: 100%;
   background: url("../images/swiper_2/bg.jpg"); }
+.blue div {
+  text-align: center; }
+
+.music_xz {
+  zoom: 150%;
+  animation: music 300s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
 
 .green {
   background: green; }
