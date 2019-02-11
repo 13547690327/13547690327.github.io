@@ -68,8 +68,20 @@ html{
 	
 }
 
+#canvas{
+	margin: 20% auto;
+    display: block;
+}
+
+
 .blue{
-	background: blue
+	#swiper_2_bg{
+		width: 100%;
+		height: auto;
+		background:url("../images/swiper_2/bg.jpg");
+
+	}
+
 }
 
 .green{

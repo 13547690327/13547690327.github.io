@@ -46,8 +46,14 @@ html {
       margin-top: 100%;
       opacity: 0; }
 
-.blue {
-  background: blue; }
+#canvas {
+  margin: 20% auto;
+  display: block; }
+
+.blue #swiper_2_bg {
+  width: 100%;
+  height: auto;
+  background: url("../images/swiper_2/bg.jpg"); }
 
 .green {
   background: green; }
