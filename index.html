@@ -8,8 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-<script src="js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
 
 <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -27,6 +26,7 @@
         </div>
         <div class="swiper-slide blue">
             <section id="swiper_2_bg">
+                <div>loser</div>
                 <audio id="audio" src="audio/loser.mp3"></audio>
                 <canvas width="300" height="300" id="canvas"></canvas>
                 <div>
@@ -34,123 +34,101 @@
                 </div>
                 <section id="aa"></section>
             </section>
-        	
-
-
-
-        <script>
-    var canvas = document.getElementById("canvas");
-    var cxt = canvas.getContext("2d");
-    //获取API
-    var AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
-    var context = new AudioContext;
-    //加载媒体
-    var audio = document.getElementById("audio");
-    //创建节点
-    var source = context.createMediaElementSource(audio);
-    var analyser = context.createAnalyser();
-    //连接：source → analyser → destination
-    source.connect(analyser);
-    analyser.connect(context.destination);
-    //创建数据
-    var output = new Uint8Array(360);
-    (function drawSpectrum() {
-        analyser.getByteFrequencyData(output);//获取频域数据
-        cxt.clearRect(0, 0, canvas.width, canvas.height);
-        //画线条
-        for (var i = 0; i < 360; i++) {
-            var value = output[i] / 6;//<===获取数据
-            cxt.beginPath();
-            cxt.lineWidth = 3;
-            cxt.strokeStyle = "white";
-
-            cxt.moveTo(150, 150);
-            //R * cos (PI/180*一次旋转的角度数) ,-R * sin (PI/180*一次旋转的角度数)
-            cxt.lineTo(Math.cos((i * 1) / 70 * Math.PI) * (100 + value) + 150, (- Math.sin((i * 1) / 70 * Math.PI) * (100 + value) + 150));
-            cxt.stroke();
-        }
-        //画一个小圆，将线条覆盖
-        cxt.beginPath();
-        cxt.lineWidth = 1;
-        cxt.arc(150, 150, 98, 0, 2 * Math.PI, false);
-
-        var img = new Image();
-        img.src = "images/swiper_2/loser.png";
-        
-        var pat=cxt.createPattern(img,"no-repeat");
-        cxt.fillStyle = pat;   
-        cxt.stroke();
-        cxt.fill();
-        //请求下一帧
-        requestAnimationFrame(drawSpectrum);
-
-          
-    })();
-
-    music_kz.addEventListener("click", function(){
-       if (this.getAttribute("src",2) == ("images/swiper_2/play.png")) {
-            this.src = "images/swiper_2/pause.png";
-            audio.play();
-        }
-        else{
-            this.src = "images/swiper_2/play.png";
-            audio.pause();
-        }
-    });
-
-</script>
 
         </div>
-        <div class="swiper-slide green"></div>
-        <div class="swiper-slide yellow"></div>
+        <div class="swiper-slide green">
+            <section id="swiper_3_bg">
+                <img id="img3" src="images/swiper_3/3.png">
+                <img id="img4" src="images/swiper_3/4.png">
+                <img id="img5" src="images/swiper_3/5.png">
+                <img id="img6" src="images/swiper_3/6.png">
+                <img id="img7" src="images/swiper_3/7.png">
+                <img id="img8" src="images/swiper_3/8.png">
+                <img id="img9" src="images/swiper_3/9.png">
+                <img id="img10" src="images/swiper_3/10.png">
+                <img id="img11" src="images/swiper_3/11.png">
+                <img id="img12" src="images/swiper_3/12.png">
+                
+            </section>
+        </div>
     </div>
 </div>
 
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+<script src="js/music.js"></script>
+
+
+
 <script>  
 $(document).ready(function () {      
- 	var mySwiper = new Swiper ('.swiper-container', {
-	    direction: 'vertical', // 垂直切换选项
-	   	
-	    speed:400,
-	    on: {
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'vertical', // 垂直切换选项
+        
+        speed:400,
+        on: {
 
-	    	init: function(){
-	    		$("#bg").animate({
-		        	width: "100%"
-		        },1000);
-		        $("#dog").animate({
-		        	bottom:"0"
-		        },1200);
-		        $("#2018").animate({
-		        	marginTop: "50%"
-		        },1000);
-		        $("#ndbg").delay(1000).animate({
-		        	marginTop: "10%",
-		        	opacity:"1"
-		        },800);
-	    	},
-
-
-
-
-		    slideNextTransitionEnd: function(){
-		      console.log("d123323");//切换结束时，诉我现在是第几个slide
-		     
-		      
+            init: function(){
+                $("#bg").animate({
+                    width: "100%"
+                },1000);
+                $("#dog").animate({
+                    bottom:"0"
+                },1200);
+                $("#2018").animate({
+                    marginTop: "50%"
+                },1000);
+                $("#ndbg").delay(1000).animate({
+                    marginTop: "10%",
+                    opacity:"1"
+                },800);
+            },
 
 
 
-		    },
+
+            slideNextTransitionEnd: function(){
+              $("#swiper_3_bg img").animate({
+                
+              },1000)
+             
+              
 
 
 
-  		},
-  	})   
+            },
+
+
+
+        },
+    })   
 })     
   </script>
-
-
-
+  <script type="text/javascript">
+    var a = document.querySelectorAll("#swiper_3_bg img");
+     for (var i = 0; i < a.length; i++) {
+         (function(j){
+            a[i].addEventListener('click',function(){
+                a[j].style.width = "100%";
+                a[j].style.top = "0";
+                a[j].style.left = "0";
+                a[j].style.zIndex = "99";
+                a[j].addEventListener('click',function(){
+                    a[j].style.width = "0";
+                    a[j].style.top = "";
+                    a[j].style.left = "";
+                    a[j].style.zIndex = "1";
+                })
+            })
+            
+         })(i)
+     }
+     //可惜好像不能使用 add（）增加class类的方法来实现
+</script>
 
 </body>
 </html>
