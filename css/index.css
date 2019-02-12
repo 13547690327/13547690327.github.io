@@ -83,7 +83,7 @@ body {
     top: 40%;
     left: 60%; }
   .green #swiper_3_bg #img5 {
-    top: 50%;
+    top: 65%;
     left: 30%; }
   .green #swiper_3_bg #img6 {
     top: 55%;
@@ -96,16 +96,22 @@ body {
     left: 40%; }
   .green #swiper_3_bg #img9 {
     top: 38%;
-    left: 37%; }
+    left: 32%; }
   .green #swiper_3_bg #img10 {
     top: 28%;
     left: 49%; }
   .green #swiper_3_bg #img11 {
-    top: 65%;
+    top: 70%;
     left: 45%; }
   .green #swiper_3_bg #img12 {
     top: 23%;
     left: 20%; }
+  .green #swiper_3_bg #img1 {
+    top: 50%;
+    left: 40%; }
+  .green #swiper_3_bg #img2 {
+    top: 18%;
+    left: 60%; }
 
 .yellow img {
   width: 100%;
