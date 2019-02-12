@@ -107,5 +107,20 @@ body {
     top: 23%;
     left: 20%; }
 
-.yellow {
-  background: #f03; }
+.yellow img {
+  width: 100%;
+  height: auto; }
+.yellow div {
+  width: 100%;
+  position: absolute;
+  top: 0; }
+  .yellow div img {
+    display: flex;
+    margin: 0 auto;
+    opacity: 0; }
+.yellow #s2019 {
+  width: 20%;
+  padding-top: 28%;
+  padding-bottom: 2%; }
+.yellow #xnkl {
+  width: 50%; }

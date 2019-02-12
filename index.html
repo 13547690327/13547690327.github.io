@@ -51,6 +51,16 @@
                 
             </section>
         </div>
+        <div class="swiper-slide yellow">
+            <section>
+                <img id="swiper_4_bg" src="images/swiper_4/bg.png">
+            </section>
+            <div>
+                <img id="s2019" src="images/swiper_4/2019.png">
+                <img id="xnkl" src="images/swiper_4/xnkl.png">
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -92,15 +102,16 @@ $(document).ready(function () {
 
 
             slideNextTransitionEnd: function(){
-              $("#swiper_3_bg img").animate({
-                
+            if (this.activeIndex == 3){
+              $("#s2019").animate({
+                opacity:"1"
+              },1000);
+              $("#xnkl").delay(500).animate({
+                opacity:"1"
               },1000)
-             
-              
+            }
 
-
-
-            },
+        },
 
 
 
@@ -118,7 +129,7 @@ $(document).ready(function () {
                 a[j].style.left = "0";
                 a[j].style.zIndex = "99";
                 a[j].addEventListener('click',function(){
-                    a[j].style.width = "0";
+                    a[j].style.width = "8%";
                     a[j].style.top = "";
                     a[j].style.left = "";
                     a[j].style.zIndex = "1";

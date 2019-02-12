@@ -157,5 +157,30 @@ body{
 
 
 .yellow{
-	background: #f03;
+	img{
+		width: 100%;
+		height: auto;	
+	}
+	div{
+		width: 100%;
+		position:absolute;
+		top: 0;
+		img{
+			display: flex;
+			margin: 0 auto;
+			opacity: 0;
+		}
+	}
+	#swiper_4_bg{
+		
+	}
+	#s2019{
+		width: 20%;
+		padding-top:28%;
+		padding-bottom:2%;
+	}
+	#xnkl{
+		width: 50%;
+	}
+
 }
