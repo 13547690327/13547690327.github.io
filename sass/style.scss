@@ -1,0 +1,127 @@
+@import "reset";
+
+#warp{
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	margin: 0 auto;
+	background:url(../images/bg.png) no-repeat fixed;
+	background-size: cover;
+	padding-top:10%;
+}
+
+.navvan{
+	position:fixed;
+	top: 0;
+	z-index:9;
+	height:.3rem;
+	background:$color;
+	animation:navvan .8s;
+}
+
+
+.nav{
+	width: 80%;
+	height: auto;
+	background:white;
+	margin:0 0 10% 10%;
+	padding: 3% 5%;
+	box-sizing:border-box;
+}
+
+.search{
+	width: 50%;
+	height: 4rem;
+	background: blue;
+	display: flex;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5%;
+}
+
+#search_text{
+	width: 80%;
+	height:4rem;
+	border: 0.2rem solid $color;
+	font: 1.8rem/4rem arial;
+  	text-indent: 1rem;
+}
+
+#search_button{
+	width: 20%;
+	height:4rem;
+	line-height: 4rem;
+	font: 1.5rem/4rem arial;
+	border: 0.2rem solid $color;
+	display: block;
+	background: $color;
+  	color: white;
+  	cursor: pointer;
+}
+
+
+ul li{
+	display: flex;
+	width: 100%;
+	height: auto;
+	font:1.8rem/2rem arial;
+	a{
+		text-decoration: none;
+		margin-right:5%;
+		color: $bgcolor;
+		&:hover{
+			color: $color;
+			transition: 1s;
+		}
+	}
+	b{
+		display: block;
+		width: 15%;
+		margin-right:0; 
+		margin-bottom: 2rem;
+		color: $color;
+		font-weight:normal;
+		cursor: default;
+	}
+	div{
+		margin-right:5%; 
+		cursor: pointer;
+		&:hover{
+		color: $color;
+		transition: 1s;
+		}
+	}
+
+}
+
+.demo{
+	width: 40%;
+	height: 10rem;
+	border-left: 7rem solid $color;
+	margin:5% 0 0 10%;
+	padding: 3% 5%;
+	background:white;
+	opacity: 0;
+	div{
+		font-size: 1.8rem;
+		
+		a{
+			text-decoration: none;
+			color: $bgcolor;
+			&:hover{
+				color: $color;
+				text-decoration: underline;
+			}
+		}
+	}
+	div:nth-child(2){
+		width: 90%;
+		margin:2% 0;
+		border:.1rem solid rgba(0,0,0,.4);
+	}
+}
+
+.demo_animate{
+	opacity: 1;
+	transition: 2s;
+}
