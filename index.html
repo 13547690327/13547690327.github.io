@@ -1,147 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-	<title></title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
-<link rel="stylesheet" type="text/css" href="css/index.css">
+<meta name="description" content="Chin秦先生丶">  
+<meta name="author" content="oldchin">
+<head>
+	<title>oldchin</title>
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
-
-
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide red">
-        	<section>
-        		<img id="bg" src="images/swiper_1/bg.png">
-        		<img id="dog" src="images/swiper_1/dog.png">
-        	</section>
-        	<div>
-        		<img id="2018" src="images/swiper_1/2018.png">
-        		<img id="wd" src="images/swiper_1/wd.png">
-        		<img id="ndbg" src="images/swiper_1/ndbg.png">	
-        	</div>
-
-        </div>
-        <div class="swiper-slide blue">
-            <section id="swiper_2_bg">
-                <div>loser</div>
-                <audio id="audio" src="audio/loser.mp3"></audio>
-                <canvas width="300" height="300" id="canvas"></canvas>
-                <div>
-                    <img id="music_kz" src="images/swiper_2/play.png">
-                </div>
-                <section id="aa"></section>
-            </section>
-
-        </div>
-        <div class="swiper-slide green">
-            <section id="swiper_3_bg">
-                <img id="img3" src="images/swiper_3/3.png">
-                <img id="img4" src="images/swiper_3/4.png">
-                <img id="img5" src="images/swiper_3/5.png">
-                <img id="img6" src="images/swiper_3/6.png">
-                <img id="img7" src="images/swiper_3/7.png">
-                <img id="img8" src="images/swiper_3/8.png">
-                <img id="img9" src="images/swiper_3/9.png">
-                <img id="img10" src="images/swiper_3/10.png">
-                <img id="img11" src="images/swiper_3/11.png">
-                <img id="img12" src="images/swiper_3/12.png">
-                <img id="img1" src="images/swiper_3/1.png">
-                <img id="img2" src="images/swiper_3/2.png">
-                
-            </section>
-        </div>
-        <div class="swiper-slide yellow">
-            <section>
-                <img id="swiper_4_bg" src="images/swiper_4/bg.png">
-            </section>
-            <div>
-                <img id="s2019" src="images/swiper_4/2019.png">
-                <img id="xnkl" src="images/swiper_4/xnkl.png">
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-
-
-
 <script src="js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-<script src="js/music.js"></script>
-
-
-
-<script>  
-$(document).ready(function () {      
-    var mySwiper = new Swiper ('.swiper-container', {
-        direction: 'vertical', // 垂直切换选项
-        
-        speed:400,
-        on: {
-
-            init: function(){
-                $("#bg").animate({
-                    width: "100%"
-                },1000);
-                $("#dog").animate({
-                    bottom:"0"
-                },1200);
-                $("#2018").animate({
-                    marginTop: "50%"
-                },1000);
-                $("#ndbg").delay(1000).animate({
-                    marginTop: "10%",
-                    opacity:"1"
-                },800);
-            },
-
-
-
-
-            slideNextTransitionEnd: function(){
-            if (this.activeIndex == 3){
-              $("#s2019").animate({
-                opacity:"1"
-              },1000);
-              $("#xnkl").delay(500).animate({
-                opacity:"1"
-              },1000)
-            }
-
-        },
-
-
-
-        },
-    })   
-})     
-  </script>
-  <script type="text/javascript">
-    var a = document.querySelectorAll("#swiper_3_bg img");
-     for (var i = 0; i < a.length; i++) {
-         (function(j){
-            a[i].addEventListener('click',function(){
-                a[j].style.width = "100%";
-                a[j].style.top = "0";
-                a[j].style.left = "0";
-                a[j].style.zIndex = "99";
-                a[j].addEventListener('click',function(){
-                    a[j].style.width = "8%";
-                    a[j].style.top = "";
-                    a[j].style.left = "";
-                    a[j].style.zIndex = "1";
-                })
-            })
-            
-         })(i)
-     }
-     //可惜好像不能使用 add（）增加class类的方法来实现
-</script>
-
+<script src="js/style.js"></script>
+<section id="warp">
+	<div class="navvan"></div>
+	<section class="nav">
+		<section class="search">
+			<input id="search_text" type="text">
+			<div id="search_button">百度一下</div>
+		</section>
+		<ul>
+			<li><b>速查工具：)</b><a href="http://css.cuishifeng.cn" target="_blank">css</a><a href="http://jquery.cuishifeng.cn/index.html" target="_blank">jquery</a><a href="http://www.goodxyx.com/tool/jschm.html" target="_blank">javascript</a></li>
+			<li><b>在追的剧</b><div>海贼王</div><div>名侦探柯南</div><div>行尸走肉九季下半季</div></li>
+			<li><b>设计那些事儿</b><div>觅元素</div><div>千图网</div><div>千库网</div><div>Uirush百宝箱</div><div>牛大拿设计师</div><div>Iconfont</div></li>
+			<li><b>我的游戏</b><div>我的世界</div><div>上古卷轴</div><div>GTA</div><div>刺客信条</div><div>使命召唤</div><div>孤岛惊魂</div><div>极品飞车</div></li>
+			<li><b>我的收藏</b><a href="https://github.com" target="_blank">Github</a><a href="http://googlehelper.net" target="_blank">Ghelper</a><a href="https://greasyfork.org/zh-CN" target="_blank">油猴脚本</a><a href="https://tinypng.com" target="_blank">图片压缩</a><a href="https://www.onlinedoctranslator.com" target="_blank">文档翻译</a><a href="https://msdn.itellyou.cn" target="_blank">msdn我告诉你</a></li>
+		</ul>
+	</section>
+	<section class="demo" id="div">
+		<div><a href="demo/demo1/index.html">元旦快乐</a></div>
+		<div></div>
+		<div>用对话形式来进行的祝福网页，顺便感叹了下年龄</div>
+	</section>
+	<section class="demo">
+		<div><a href="demo/demo2/index.html">2018年度报告</a></div>
+		<div></div>
+		<div>12张照片，代表我过去的12月，配上loser的背景音乐，实在讽刺。2018我过的一点儿都不充实，也体现出时间易失。其实最想表达的把握当下，迎接未来却不知道如何做，哎</div>
+	</section>
+</section>
 </body>
 </html>
+
+
+

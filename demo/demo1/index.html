@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width =device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+	<title></title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div style="height: 1300px">
+<div class="box box_1" id="a">
+	<div class="me"></div>
+	<div class="text text1"></div>
+</div>
+
+<div class="box" id="b">
+	<div class="me"></div>
+	<div class="text text2"></div>
+</div>
+
+<div class="box" id="c">
+	<div class="me"></div>
+	<div class="text text3"></div>
+</div>
+
+<div class="box" id="d">
+	<div class="me"></div>
+	<div class="text text4"></div>
+</div>
+
+<div class="box" id="e">
+	<div class="me"></div>
+	<div class="text text5"></div>
+</div>
+
+<div class="box" id="f">
+	<div class="me"></div>
+	<div class="text text6"></div>
+</div>
+
+<div class="box" id="g">
+	<div class="me"></div>
+	<div class="text text7"></div>
+</div>
+
+<div class="box" id="h">
+	<div class="me"></div>
+	<div class="text text8"></div>
+	<div id="play"></div>
+</div>
+
+<div class="box box_music" id="i">
+	<div class="me"></div>
+	<div class="music">
+		<audio id="audio" src="audio/7years.mp3"></audio>
+		<canvas id="canvas"></canvas>
+	</div>
+</div>
+
+<div class="box" id="j">
+	<div class="me"></div>
+	<div class="text text9"></div>
+</div>
+
+<div class="box" id="k">
+	<div class="me"></div>
+	<div class="text text10"></div>
+</div>
+
+<div class="box" id="l">
+	<div class="me"></div>
+	<div class="text text11"></div>
+</div>
+
+
+<div class="box" id="m">
+	<div class="me"></div>
+	<div class="text text12"></div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/audio.js"></script>
+<script>
+$(function(){
+
+        $('#a').animate({opacity:"1"},2000,
+        	function() {
+        	    $('#b').delay(1000).animate({opacity:"1"},1200,
+        	    	function() {	
+        	    		 $('#c').delay(1000).animate({opacity:"1"},1200,
+        	    		 	function() {
+        	    		 		$('#d').delay(1000).animate({opacity:"1"},1200,
+        	    		 			function() {
+        	    		 				$('#e').delay(1000).animate({opacity:"1"},1200,
+        	    		 					function(){
+        	    		 						$('html,body').animate({scrollTop:$('#f').offset().top});
+        	    		 						$('#f').delay(1000).animate({opacity:"1"},1200,
+        	    		 							function() {
+        	    		 								$('#g').delay(1000).animate({opacity:"1"},1200,
+        	    		 									function() {
+        	    		 										$('#h').delay(1000).animate({opacity:"1"},1200,);
+        	    		 									});
+        	    		 							});
+        	    		 					});
+        	    		 			});
+        	    		 	});
+        	    	});
+        	});
+
+		 
+        document.getElementById("play").addEventListener("click", function(){
+        	$('#i').delay(1000).animate({opacity:"1"},1200,);
+        	document.getElementById('audio').play();
+		});
+		document.getElementById('audio').loop = false;
+   		document.getElementById('audio').addEventListener('ended', function () { 
+   			$('html,body').animate({scrollTop:$('#j').offset().top}); 
+        	$('#j').delay(1000).animate({opacity:"1"},1200,
+        		function() {
+        			$('#k').delay(1500).animate({opacity:"1"},1500,
+        				function() {
+        					$('#l').delay(1500).animate({opacity:"1"},1800,
+        						function() {
+        							$('#m').delay(1500).animate({opacity:"1"},2200,);
+        						});
+        				});
+        		});
+    }, false);
+		 
+
+
+
+        
+  
+   
+
+})
+</script>
+</body>
+</html>
+

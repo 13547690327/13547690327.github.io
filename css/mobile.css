@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+html {
+  font-size: 10px;
+  font-family: arial;
+  overflow-x: hidden; }
+
+body {
+  overflow-x: hidden; }
+
+::selection {
+  background: #222;
+  color: #f03; }
+
+::-webkit-scrollbar {
+  width: .3rem;
+  background-color: white; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #222; }
+
+@keyframes navvan {
+  50% {
+    width: 35%;
+    opacity: 1; }
+  80% {
+    width: 60%;
+    opacity: .5; }
+  100% {
+    width: 88%;
+    opacity: .2; } }
+@media screen and (max-width: 620px) {
+  #warp {
+    height: 100vh;
+    padding-top: 20%; }
+
+  .nav {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15%;
+    padding: 0;
+    background: transparent; }
+
+  .search {
+    width: 95%; }
+
+  ul {
+    display: none; }
+
+  .demo {
+    width: 80%;
+    height: 4rem;
+    border-left: 2rem solid #f03;
+    margin: 7% auto;
+    padding: 3% 5%;
+    background: white; }
+    .demo div {
+      display: none; }
+    .demo div:first-child {
+      display: block;
+      font-size: 2rem;
+      line-height: 4rem; } }
