@@ -1,0 +1,17 @@
+{
+"messge": "succ", 
+"data": [
+    {
+        "name": "aaa", 
+        "age": 18, 
+        "sex": 1,
+        "url": "../images/1.jpg"
+    }, 
+    {
+        "name": "bbb", 
+        "age": 10, 
+        "sex": 0,
+        "url": "../images/5.jpg"
+    }
+    ]
+}
