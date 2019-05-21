@@ -2,62 +2,292 @@
 <html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="description" content="Chin秦先生丶">  
-<meta name="author" content="秦先生的个人网站">
+<meta name="description" content="chin,秦记">  
+<meta name="author" content="chin,秦记">
 <head>
 	<title>oldchin</title>
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/mobile.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/moblie.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
 </head>
 <body>
-<script src="js/jquery.min.js"></script>
-<script src="js/style.js"></script>
-<section id="warp">
-	<div class="navvan"></div>
-	<section class="nav">
-		<section class="search">
-			<input id="search_text" type="text">
-			<div id="search_button">百度一下</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<div class="warpper swiper-container">
+	<section class="warpper-left">
+		<nav>
+			<div class="logo" >
+				<a href="https://13547690327.github.io/"><img src="images/logo.jpg"></a>
+			</div>
+			<ul>
+				<li id="sliIndex0" class="sliIndex active">首页</li>
+				<li id="sliIndex1" class="sliIndex">元旦快乐</li>
+				<li id="sliIndex2" class="sliIndex">2018年度报告</li>
+				<li id="sliIndex3" class="sliIndex">模仿TIM</li>
+				<li id="sliIndex4" class="sliIndex">四月是你的谎言</li>
+				<li id="sliIndex5" class="sliIndex">模仿饿了么</li>
+				<li id="sliIndex6" class="sliIndex">重构我的网站</li>
+			</ul>
+		</nav>
+	</section>
+	<section class="warpper-right  swiper-wrapper">
+		<section class="page0 swiper-slide">
+			<div class="background-radius"></div>
+			<div class="subnav">
+				<section class="search">
+					<input id="search_text" type="text" onkeydown="keysousuo()">
+					<div id="search_button">百度一下</div>
+				</section>
+				<ul>
+					<li>Hello Friend：)</li>
+					<li>
+						在追的剧
+						<ol>
+							<li>海贼王</li>
+							<li>名侦探柯南</li>
+							<li>一拳超人</li>
+							<li>行尸走肉</li>
+							<li>行尸之惧</li>
+						</ol>
+					</li>
+					<li>
+						设计那些事儿
+						<ol>
+							<li>觅元素</li>
+							<li>千图网</li>
+							<li>千库网</li>
+							<li>Uirush百宝箱</li>
+							<li>牛大拿设计师</li>
+							<li>Iconfont</li>
+						</ol>
+					</li>
+					<li>
+						我的Game
+						<ol>
+							<li>我的世界</li>
+							<li>给他爱</li>
+							<li>刺客信条</li>
+							<li>孤岛惊魂</li>
+							<li>极品飞车</li>
+							<li>上古卷轴</li>
+							<li>使命召唤</li>
+						</ol>
+					</li>
+					<li>
+						我的收藏
+						<ol class="a">
+							<li><a href="https://github.com" target="_blank">Github</a></li>
+							<li><a href="http://googlehelper.net" target="_blank">Ghelper</a></li>
+							<li><a href="https://greasyfork.org/zh-CN" target="_blank">油猴脚本</a></li>
+							<li><a href="https://tinypng.com" target="_blank">图片压缩</a></li>
+							<li><a href="https://www.onlinedoctranslator.com" target="_blank">文档翻译</a></li>
+							<li><a href="https://msdn.itellyou.cn" target="_blank">msdn我告诉你</a></li>
+						</ol>
+					</li>
+					<li>Hello World：(</li>
+				</ul>
+			</div>
 		</section>
-		<ul>
-			<li><b>速查工具：)</b><a href="http://css.cuishifeng.cn" target="_blank">css</a><a href="http://jquery.cuishifeng.cn/index.html" target="_blank">jquery</a><a href="http://www.goodxyx.com/tool/jschm.html" target="_blank">javascript</a></li>
-			<li><b>在追的剧</b><div>海贼王</div><div>名侦探柯南</div><div>一拳超人</div><div>行尸走肉</div><div>行尸之惧</div></li>
-			<li><b>设计那些事儿</b><div>觅元素</div><div>千图网</div><div>千库网</div><div>Uirush百宝箱</div><div>牛大拿设计师</div><div>Iconfont</div></li>
-			<li><b>我的游戏</b><div>我的世界</div><div>上古卷轴</div><div>GTA</div><div>刺客信条</div><div>使命召唤</div><div>孤岛惊魂</div><div>极品飞车</div></li>
-			<li><b>我的收藏</b><a href="https://github.com" target="_blank">Github</a><a href="http://googlehelper.net" target="_blank">Ghelper</a><a href="https://greasyfork.org/zh-CN" target="_blank">油猴脚本</a><a href="https://tinypng.com" target="_blank">图片压缩</a><a href="https://www.onlinedoctranslator.com" target="_blank">文档翻译</a><a href="https://msdn.itellyou.cn" target="_blank">msdn我告诉你</a></li>
-		</ul>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<img src="images/demo1.png">
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo1/index.html">元旦快乐</a>
+					</div>
+					<div class="content">用对话形式来进行的祝福网页，顺便感叹了下年龄</div>
+				</div>
+			</section>
+		</section>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<img src="images/demo2.png">
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo2/index.html">2018年度报告</a>
+					</div>
+					<div class="content">12张照片，代表我过去的12月，配上loser的背景音乐，实在讽刺。2018我过的一点儿都不充实，也体现出时间易失。其实最想表达的把握当下，迎接未来却不知道如何做，哎</div>
+				</div>
+			</section>
+		</section>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<img src="images/demo3.png">
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo3/index.html">QIM - 模仿了下TIM</a>
+					</div>
+					<div class="content">闲来无事，碰碰撞撞的使用vue-cli模仿了TIM做了个单页应用QIM,然后发现webpack打包是真的好用，这个还不算完成，还是得去翻完Vue文档再说</div>
+				</div>
+			</section>
+		</section>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<img src="images/demo4.png">
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo4/index.html">四月是我的谎言</a>
+					</div>
+					<div class="content">这是2019年，这是四月，这是我的四月。</div>
+				</div>
+			</section>
+		</section>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<img src="images/demo5.png">
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo5/index.html">模仿饿了么</a>
+					</div>
+					<div class="content">网上看到的高仿外卖饿了么vue实战教程，正在学，上传github真机看看，用chorme模拟手机开发还不知道真机是什么样子！</div>
+				</div>
+			</section>
+		</section>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<img src="images/demo6.png">
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo6/index.html">重构我的网站</a>
+					</div>
+					<div class="content">闲来无事，出于对美的向往，于是重新构造了下自己的网站，满满的设计感</div>
+				</div>
+			</section>
+		</section>
 	</section>
-	<section class="demo" id="div">
-		<div><a href="demo/demo1/index.html">元旦快乐</a></div>
-		<div></div>
-		<div>用对话形式来进行的祝福网页，顺便感叹了下年龄</div>
-	</section>
-	<section class="demo">
-		<div><a href="demo/demo2/index.html">2018年度报告</a></div>
-		<div></div>
-		<div>12张照片，代表我过去的12月，配上loser的背景音乐，实在讽刺。2018我过的一点儿都不充实，也体现出时间易失。其实最想表达的把握当下，迎接未来却不知道如何做，哎</div>
-	</section>
-	<section class="demo">
-		<div><a href="demo/demo3/index.html">QIM - 模仿了下TIM</a></div>
-		<div></div>
-		<div>闲来无事，碰碰撞撞的使用vue-cli模仿了TIM做了个单页应用QIM,然后发现webpack打包是真的好用，这个还没完成，还是得去翻完Vue文档再说，先放着 后来补上</div>
-	</section>
-	<section class="demo">
-		<div><a href="demo/demo4/index.html">四月是我的谎言</a></div>
-		<div></div>
-		<div>这是2019年，这是四月，这是我的四月。</div>
-	</section>
-	<section class="demo">
-		<div><a href="demo/demo5/index.html">模仿饿了么</a></div>
-		<div></div>
-		<div>网上看到的高仿外卖饿了么vue实战教程，正在学，上传github真机看看，用chorme模拟手机开发还不知道真机是什么样子
-		！</div>
-	</section>
-</section>
+	<div class="swiper-pagination"></div>
+</div>
+
+<div class="moblie">
+	<div class="demo">
+		<div class="text">
+			<a href="demo/demo1/index.html">元旦快乐</a>
+		</div>
+		<div class="text">
+			<a href="demo/demo2/index.html">2018年度报告</a>
+		</div>
+		<div class="text">
+			<a href="demo/demo3/index.html">QIM - 模仿了下TIM</a>
+		</div>
+		<div class="text">
+			<a href="demo/demo4/index.html">四月是我的谎言</a>
+		</div>
+		<div class="text">
+			<a href="demo/demo5/index.html">模仿饿了么</a>
+		</div>
+		<div class="text">
+			<a href="demo/demo6/index.html">重构我的网站</a>
+		</div>
+	</div>
+</div>
+
+<script>   
+
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal', 
+        speed:400,
+        hashNavigation: true,
+        keyboard : true,
+        mousewheel: true,
+        pagination: {
+    		el: '.swiper-pagination',
+		    dynamicBullets:true,
+		    dynamicMainBullets: 2,
+		    clickable:true,
+  		},
+        on: {
+        	init: function(){
+	        	let red = document.getElementsByClassName('background-radius')[0];
+	            red.style.width = '200vw';
+	            red.style.height = '200vw';
+	            red.style.backgroundColor = '#f03';
+            },
+             transitionStart: function(){
+             	/*let colorrgb = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 10) + ')';*/
+            	let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54'];
+            	/*color.push();*/
+		    	let red = document.getElementsByClassName('background-radius');
+		    	let sliIndex = document.getElementsByClassName('sliIndex');
+		    	for(let i = 0; i<color.length; i++){
+		    		red[i].style.backgroundColor = color[i];
+		    		if (this.activeIndex == [i]){
+			            red[i].style.width = '2500px';
+			            red[i].style.height = '2500px';
+			            $(sliIndex).removeClass("active");
+			          	$(sliIndex[i]).addClass("active"); 	 
+		            }
+		    	}	
+			},
+		},
+
+
+    })   
+
+
+$('#sliIndex0').click(function(){
+    mySwiper.slideTo(0, 1000, false);
+  });
+$('#sliIndex1').click(function(){
+    mySwiper.slideTo(1, 1000, true);
+  });
+$('#sliIndex2').click(function(){
+    mySwiper.slideTo(2, 1000, false);
+  });
+$('#sliIndex3').click(function(){
+    mySwiper.slideTo(3, 1000, false);
+  });
+$('#sliIndex4').click(function(){
+    mySwiper.slideTo(4, 1000, false);
+  });
+$('#sliIndex5').click(function(){
+    mySwiper.slideTo(5, 1000, false);
+  });
+$('#sliIndex6').click(function(){
+    mySwiper.slideTo(6, 1000, false);
+  });
+
+
+let sousuo = document.getElementById('search_text');
+let baidu = document.getElementById('search_button');
+let baiduurl = "https://www.baidu.com/s?wd=";
+
+let baiduurl_text =  document.querySelectorAll("ol li");
+
+baidu.addEventListener('click',function() {
+	window.open(baiduurl + sousuo.value)
+});
+
+function keysousuo(){
+ if (event.keyCode==13)  //回车键的键值为13
+window.open(baiduurl + sousuo.value)
+}
+
+for(let i = 0; i<baiduurl_text.length -6; i++){
+baiduurl_text[i].addEventListener('click',function() {
+	window.open(baiduurl + baiduurl_text[i].innerHTML)
+	});
+}
+
+</script>
 </body>
 </html>
-
-
-
