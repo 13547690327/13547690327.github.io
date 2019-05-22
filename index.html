@@ -14,7 +14,7 @@
 </head>
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-<script src="js/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <div class="warpper swiper-container">
 	<section class="warpper-left">
 		<nav>
@@ -179,29 +179,47 @@
 </div>
 
 <div class="moblie">
-	<div class="demo">
-		<div class="text">
-			<a href="demo/demo1/index.html">元旦快乐</a>
+	<div class="search">
+		<div class="mobLogo">
+			<img src="images/logo.gif">
 		</div>
-		<div class="text">
-			<a href="demo/demo2/index.html">2018年度报告</a>
+		<div class="searchBox">
+			<input type="text" value="" placeholder="搜索或输入网址" onkeydown="keymobsousuo()">
+			<input type="button">
 		</div>
-		<div class="text">
-			<a href="demo/demo3/index.html">QIM - 模仿了下TIM</a>
+		<div class="searchBoxBg"></div>
+		<div class="searchText"></div>
+	</div>
+	<div class="mobNav">
+		<div class="mobDemo">
+			<a href="demo/demo1/index.html"></a>
+			<div class="title">demo1</div>
 		</div>
-		<div class="text">
-			<a href="demo/demo4/index.html">四月是我的谎言</a>
+		<div class="mobDemo">
+			<a href="demo/demo2/index.html"></a>
+			<div class="title">demo2</div>
 		</div>
-		<div class="text">
-			<a href="demo/demo5/index.html">模仿饿了么</a>
+		<div class="mobDemo">
+			<a href="demo/demo3/index.html"></a>
+			<div class="title">demo3</div>
 		</div>
-		<div class="text">
-			<a href="demo/demo6/index.html">重构我的网站</a>
+		<div class="mobDemo">
+			<a href="demo/demo4/index.html"></a>
+			<div class="title">demo4</div>
+		</div>
+		<div class="mobDemo">
+			<a href="demo/demo5/index.html"></a>
+			<div class="title">demo5</div>
+		</div>
+		<div class="mobDemo">
+			<a href="demo/demo6/index.html"></a>
+			<div class="title">demo6</div>
 		</div>
 	</div>
 </div>
 
 <script>   
+let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54'];
 
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal', 
@@ -224,7 +242,7 @@
             },
              transitionStart: function(){
              	/*let colorrgb = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 10) + ')';*/
-            	let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54'];
+            	
             	/*color.push();*/
 		    	let red = document.getElementsByClassName('background-radius');
 		    	let sliIndex = document.getElementsByClassName('sliIndex');
@@ -270,8 +288,85 @@ $('#sliIndex6').click(function(){
 let sousuo = document.getElementById('search_text');
 let baidu = document.getElementById('search_button');
 let baiduurl = "https://www.baidu.com/s?wd=";
+let googleurl = "https://g.moeyui.cn/search?q=";
 
 let baiduurl_text =  document.querySelectorAll("ol li");
+
+let inputT = document.getElementsByTagName('input');
+let mob = document.getElementsByClassName('moblie')[0];
+let mobLogo = document.getElementsByClassName('mobLogo')[0];
+let searchBoxBg = document.getElementsByClassName('searchBoxBg')[0];
+let searchText = document.getElementsByClassName('searchText')[0];
+
+inputT[1].onfocus = function() {
+	this.placeholder='';	
+	mob.style.paddingTop= '0'; 
+	mobLogo.style.width = '0';
+	searchBoxBg.style.display = 'block';
+	searchBoxBg.style.backgroundColor = 'rgba(255,255,255,.7)';
+}
+
+inputT[1].oninput = function () {
+	if (inputT[1].value !== '')  {
+		inputT[2].style.display = 'block';
+		searchBoxBg.style.backgroundColor = 'rgba(255,255,255,1)';
+		searchText.innerHTML = inputT[1].value;
+	}else{
+		inputT[2].style.display = 'none';
+		searchText.innerHTML = '';
+		searchBoxBg.style.backgroundColor = 'rgba(255,255,255,.7)';
+	}
+}
+
+inputT[2].addEventListener('click',function() {
+	inputT[1].value = '';
+	inputT[2].style.display = 'none';
+	searchText.innerHTML = inputT[1].value;
+	searchBoxBg.style.backgroundColor = 'rgba(255,255,255,.7)';
+	inputT[1].focus();
+});
+
+function keymobsousuo(){
+ if (event.keyCode==13 || inputT[1].value.match('http')){
+ 	window.open(inputT[1].value)
+ }else if (event.keyCode==13 ) {
+ 	window.open(googleurl + inputT[1].value)
+ }
+	
+}
+
+searchText.addEventListener('click',function() {
+	if (inputT[1].value.match('http')){
+	 window.open(inputT[1].value)
+	}else{
+		window.open(googleurl + inputT[1].value)
+	}
+});
+
+inputT[1].onblur = function() {
+	if (inputT[1].value !== '') {
+		return
+	}
+	this.placeholder='搜索或输入网址';
+	mob.style.paddingTop= '25%'; 
+	mobLogo.style.width = '100%';
+	searchBoxBg.style.display = 'none';
+}
+
+
+
+
+let mobDemoA = document.querySelectorAll(".mobDemo a");
+
+let mobcolor = [];
+
+mobcolor = mobcolor.concat(color);
+
+mobcolor.splice(0,1);
+
+for(let i = 0; i < mobcolor.length; i++){
+	mobDemoA[i].style.backgroundColor = mobcolor[i];
+}
 
 baidu.addEventListener('click',function() {
 	window.open(baiduurl + sousuo.value)
@@ -282,11 +377,15 @@ function keysousuo(){
 window.open(baiduurl + sousuo.value)
 }
 
+
+
 for(let i = 0; i<baiduurl_text.length -6; i++){
 baiduurl_text[i].addEventListener('click',function() {
 	window.open(baiduurl + baiduurl_text[i].innerHTML)
 	});
 }
+
+
 
 </script>
 </body>
