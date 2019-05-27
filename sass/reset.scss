@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none; 
+  text-decoration:none;
+/*  user-select:none;
+  -webkit-user-select:none;
+  -ms-user-select:none;
+  -moz-user-select:none;*/
+}
+
+html {
+  font-size: 16px;
+  font-family: arial;
+  overflow-y: hidden; 
+}
+
+body {
+  overflow-y: hidden; 
+}
+
+::selection {
+  background: #f03;
+  color: #fff; 
+}
+
+.background-radius{
+	width: 0px;
+	height: 0px;
+	border-radius: 0 0 100% 0;
+	transition:  all .8s;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.swiper-pagination-bullet-active{
+	background:#fff !important;
+}
+/*::-webkit-scrollbar {
+  width:3px;
+  background-color: white; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f03; 
+  background-image: -webkit-linear-gradient(50deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+
+}*/
+

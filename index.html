@@ -6,7 +6,7 @@
 <meta name="author" content="chin,秦记">
 <head>
 	<title>oldchin</title>
-<link rel="shortcut icon" href="favicon.png">
+<link rel="shortcut icon" href="images/favicon.png">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/moblie.css">
@@ -14,7 +14,7 @@
 </head>
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-<script src="js/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <div class="warpper swiper-container">
 	<section class="warpper-left">
 		<nav>
@@ -29,6 +29,7 @@
 				<li id="sliIndex4" class="sliIndex">四月是你的谎言</li>
 				<li id="sliIndex5" class="sliIndex">模仿饿了么</li>
 				<li id="sliIndex6" class="sliIndex">重构我的网站</li>
+				<span class="sliIndexRed"></span>
 			</ul>
 		</nav>
 	</section>
@@ -80,7 +81,7 @@
 						<ol class="a">
 							<li><a href="https://github.com" target="_blank">Github</a></li>
 							<li><a href="http://googlehelper.net" target="_blank">Ghelper</a></li>
-							<li><a href="https://send.firefox.com/">火狐免费云盘</a></li>
+							<li><a href="https://send.firefox.com" target="_blank">火狐免费云盘</a></li>
 							<li><a href="https://greasyfork.org/zh-CN" target="_blank">油猴脚本</a></li>
 							<li><a href="https://tinypng.com" target="_blank">图片压缩</a></li>
 							<li><a href="https://www.onlinedoctranslator.com" target="_blank">文档翻译</a></li>
@@ -182,7 +183,7 @@
 <div class="moblie">
 	<div class="search">
 		<div class="mobLogo">
-			<img src="images/google.gif">
+			<img src="images/logo.gif">
 		</div>
 		<div class="searchBox">
 			<input type="text" value="" placeholder="搜索或输入网址" onkeydown="keymobsousuo()">
@@ -252,8 +253,11 @@ let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54']
 		    		if (this.activeIndex == [i]){
 			            red[i].style.width = '2500px';
 			            red[i].style.height = '2500px';
-			            $(sliIndex).removeClass("active");
-			          	$(sliIndex[i]).addClass("active"); 	 
+			            /*$(sliIndex).removeClass("active");
+			          	$(sliIndex[i]).addClass("active"); */	
+			          	$('.sliIndexRed').animate({
+						 	'top' : $(sliIndex[i]).position().top + 'px'
+						 },300, 'swing') 
 		            }
 		    	}	
 			},
@@ -285,6 +289,11 @@ $('#sliIndex6').click(function(){
     mySwiper.slideTo(6, 1000, false);
   });
 
+$('.sliIndex').click(function(){
+	$('.sliIndexRed').animate({
+	 	'top' : $(this).position().top + 'px'
+	 },300, 'swing')
+  });
 
 let sousuo = document.getElementById('search_text');
 let baidu = document.getElementById('search_button');
@@ -354,9 +363,6 @@ inputT[1].onblur = function() {
 	searchBoxBg.style.display = 'none';
 }
 
-
-
-
 let mobDemoA = document.querySelectorAll(".mobDemo a");
 
 let mobcolor = [];
@@ -378,16 +384,11 @@ function keysousuo(){
 window.open(baiduurl + sousuo.value)
 }
 
-
-
 for(let i = 0; i<baiduurl_text.length -6; i++){
 baiduurl_text[i].addEventListener('click',function() {
 	window.open(baiduurl + baiduurl_text[i].innerHTML)
 	});
 }
-
-
-
 </script>
 </body>
 </html>
