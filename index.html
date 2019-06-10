@@ -29,6 +29,7 @@
 				<li id="sliIndex4" class="sliIndex">四月是你的谎言</li>
 				<li id="sliIndex5" class="sliIndex">模仿饿了么</li>
 				<li id="sliIndex6" class="sliIndex">重构我的网站</li>
+				<li id="sliIndex7" class="sliIndex">模仿LINE</li>
 				<span class="sliIndexRed"></span>
 			</ul>
 		</nav>
@@ -176,6 +177,20 @@
 				</div>
 			</section>
 		</section>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<img src="images/demo7.png">
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo7/index.html">模仿line</a>
+					</div>
+					<div class="content">感觉和demo1很相似 好似在做一个铺垫 从demo1到demo7</div>
+				</div>
+			</section>
+		</section>
 	</section>
 	<div class="swiper-pagination"></div>
 </div>
@@ -217,11 +232,15 @@
 			<a href="demo/demo6/index.html"></a>
 			<div class="title">demo6</div>
 		</div>
+		<div class="mobDemo">
+			<a href="demo/demo7/index.html"></a>
+			<div class="title">demo7</div>
+		</div>
 	</div>
 </div>
 
 <script>   
-let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54'];
+let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54','#4ecd00'];
 
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal', 
@@ -288,6 +307,10 @@ $('#sliIndex5').click(function(){
 $('#sliIndex6').click(function(){
     mySwiper.slideTo(6, 1000, false);
   });
+$('#sliIndex7').click(function(){
+    mySwiper.slideTo(7, 1000, false);
+  });
+
 
 $('.sliIndex').click(function(){
 	$('.sliIndexRed').animate({
