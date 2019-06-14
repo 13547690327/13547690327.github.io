@@ -15,12 +15,12 @@
 			background:#fff;
 			padding: 20px;
 			.logo{
-				margin: 80px auto;
-				width: 80px;
-				height: 80px;
+				margin: 60px auto;
+				width: 120px;
+				height: 120px;
 				img{
-					widows: 80px;
-					height: 80px;
+					width: 120px;
+					height: 120px;
 					cursor: pointer;
 				}
 			}
@@ -42,6 +42,24 @@
 					background:red;
 					left: -20px;
 					top: 0;
+				}
+			}
+			footer{
+				width: 100%;
+				position:absolute;
+				bottom:50px;
+				left: 0;
+				display: flex;
+				flex-wrap: wrap;
+				.lianxi{
+					width: 25%;
+					text-align: center;
+					margin: 5px 0;
+					img{
+						width: 20px;
+						height: 20px;
+						border-radius:50%;
+					}
 				}
 			}
 		}
