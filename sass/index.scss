@@ -38,10 +38,12 @@
 				margin: 60px auto;
 				width: 120px;
 				height: 120px;
-				img{
+				a{
 					width: 120px;
 					height: 120px;
-					cursor: pointer;
+					background-image:url('../images/logo.png');
+					background-size: 120px 120px;
+					display: block;
 				}
 			}
 			& > ul{
@@ -75,10 +77,31 @@
 					width: 33%;
 					text-align: center;
 					margin: 5px 0;
-					img{
+					a{
 						width: 20px;
 						height: 20px;
+						background-repeat: no-repeat;
+						display: inline-block;
 						border-radius:50%;
+						background-size:20px 20px;
+					}
+					.icon1{
+						background-image:url('../images/qq.png');
+					}
+					.icon2{
+						background-image:url('../images/wechat.png');
+					}
+					.icon3{
+						background-image:url('../images/wyyyy.jpg');
+					}
+					.icon4{
+						background-image:url('../images/instagram.png');
+					}
+					.icon5{
+						background-image:url('../images/youtube.png');
+					}
+					.icon6{
+						background-image:url('../images/google.png');
 					}
 				}
 			}
@@ -184,9 +207,31 @@
 				margin: auto;
 				.demoLogo{
 					margin-left:calc((100% - 728px) / 2);
-					img{
+					.demo0{
 						width: auto;
-						height: auto;
+						height:280px;
+						background-repeat:no-repeat;
+					}
+					.demo1img{
+						background-image:url('../images/demo1.png');
+					}
+					.demo2img{
+						background-image:url('../images/demo2.png');
+					}
+					.demo3img{
+						background-image:url('../images/demo3.png');
+					}
+					.demo4img{
+						background-image:url('../images/demo4.png');
+					}
+					.demo5img{
+						background-image:url('../images/demo5.png');
+					}
+					.demo6img{
+						background-image:url('../images/demo6.png');
+					}
+					.demo7img{
+						background-image:url('../images/demo7.png');
 					}
 				}
 				.text{
