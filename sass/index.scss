@@ -1,3 +1,22 @@
+.loading{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	z-index: 100;
+	img{
+		width: 64px;
+		height: auto;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+
+
 .warpper{
 	width: auto;
 	height: 100vh;
