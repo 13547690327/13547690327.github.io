@@ -269,7 +269,9 @@ let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54',
 
 document.onreadystatechange = function () {//即在加载的过程中执行下面的代码
 	if(document.readyState=="complete"){//complete加载完成
-		document.getElementsByClassName('loading')[0].style.display = 'none'
+		setTimeout(() =>{	
+			document.getElementsByClassName('loading')[0].style.display = 'none'
+		},1000)
 	}
 }
 
