@@ -39,20 +39,20 @@
 				<div class="lianxi">
 					<a class="icon0 icon1" href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3464281236" target="_blank"></a>
 				</div>
-				<div class="lianxi">
-					<a class="icon0 icon2" href=""  target="_blank"></a>
+				<div class="lianxi" id="weixin">
+					<a class="icon0 icon2" href="#"  ></a>
 				</div>
 				<div class="lianxi">
 					<a class="icon0 icon3" href="https://music.163.com/#/user/home?id=601145134" target="_blank"></a>
 				</div>
-				<div class="lianxi">
-					<a class="icon0 icon4" href="" target="_blank"></a>
+				<div class="lianxi" id="ins">
+					<a class="icon0 icon4" href="#" ></a>
 				</div>
 				<div class="lianxi">
-					<a class="icon0 icon5" href="" target="_blank"></a>
+					<a class="icon0 icon5" href="https://www.youtube.com/channel/UCvQB4hz5-mzknxwqe0vb_RQ" target="_blank"></a>
 				</div>
-				<div class="lianxi">
-					<a class="icon0 icon6" href="" target="_blank"></a>
+				<div class="lianxi" id="google">
+					<a class="icon0 icon6" href="#" ></a>
 				</div>
 			</footer>
 		</nav>
@@ -85,7 +85,7 @@
 							<li>千图网</li>
 							<li>千库网</li>
 							<li>Uirush百宝箱</li>
-							<li>牛大拿设计师</li>
+							<li>求字体网</li>
 							<li>Iconfont</li>
 						</ol>
 					</li>
@@ -446,6 +446,22 @@ baiduurl_text[i].addEventListener('click',function() {
 	window.open(baiduurl + baiduurl_text[i].innerHTML)
 	});
 }
+
+
+function click() {
+	document.getElementById('weixin').onclick = function() {
+		alert('手机号 13547690327')
+	}
+	document.getElementById('ins').onclick = function() {
+		alert('用户名 gentlemanChin')
+	}
+	document.getElementById('google').onclick = function() {
+		alert('邮箱号 chinqinji@gmail.com')
+	}
+}
+
+
+click()
 
 </script>
 </body>
