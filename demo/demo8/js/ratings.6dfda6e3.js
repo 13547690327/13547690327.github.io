@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["ratings"],{"9bac":function(n,t,a){"use strict";a.r(t);var s=function(){var n=this,t=n.$createElement,a=n._self._c||t;return a("div",{staticClass:"ratings"},[n._v("\n\t 评论\n")])},e=[],i={name:"ratings"},r=i,c=a("2877"),l=Object(c["a"])(r,s,e,!1,null,null,null);t["default"]=l.exports}}]);
+//# sourceMappingURL=ratings.6dfda6e3.js.map

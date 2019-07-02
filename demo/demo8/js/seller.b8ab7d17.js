@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["seller"],{"38d4":function(e,l,n){"use strict";n.r(l);var s=function(){var e=this,l=e.$createElement,n=e._self._c||l;return n("div",{staticClass:"seller"},[e._v("\n\t 商家\n")])},t=[],r={name:"seller"},a=r,c=n("2877"),u=Object(c["a"])(a,s,t,!1,null,null,null);l["default"]=u.exports}}]);
+//# sourceMappingURL=seller.b8ab7d17.js.map
