@@ -33,6 +33,7 @@
 				<li id="sliIndex5" class="sliIndex">模仿饿了么</li>
 				<li id="sliIndex6" class="sliIndex">重构我的网站</li>
 				<li id="sliIndex7" class="sliIndex">模仿LINE</li>
+				<li id="sliIndex8" class="sliIndex">模仿美团外卖</li>
 				<span class="sliIndexRed"></span>
 			</ul>
 			<footer>
@@ -226,6 +227,20 @@
 				</div>
 			</section>
 		</section>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<div class="demo0 demo8img"></div>
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo8/index.html">模仿美团外卖</a>
+					</div>
+					<div class="content">对于demo5模仿饿了么是跟着教程做的，很多知识需要吸收，所以在尝试下美团外卖？</div>
+				</div>
+			</section>
+		</section>
 	</section>
 	<div class="swiper-pagination"></div>
 </div>
@@ -271,11 +286,15 @@
 			<a href="demo/demo7/index.html"></a>
 			<div class="title">demo7</div>
 		</div>
+		<div class="mobDemo">
+			<a href="demo/demo8/index.html"></a>
+			<div class="title">demo8</div>
+		</div>
 	</div>
 </div>
 
 <script>   
-let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54','#4ecd00'];
+let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54','#4ecd00','#FFD161'];
 
 
 document.onreadystatechange = function () {//即在加载的过程中执行下面的代码
@@ -355,6 +374,10 @@ $('#sliIndex6').click(function(){
 $('#sliIndex7').click(function(){
     mySwiper.slideTo(7, 1000, false);
   });
+$('#sliIndex8').click(function(){
+    mySwiper.slideTo(8, 1000, false);
+  });
+
 
 
 $('.sliIndex').click(function(){
