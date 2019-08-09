@@ -35,6 +35,7 @@
 				<li id="sliIndex7" class="sliIndex">模仿LINE</li>
 				<li id="sliIndex8" class="sliIndex">模仿美团外卖</li>
 				<li id="sliIndex9" class="sliIndex">模仿去哪儿网</li>
+				<li id="sliIndex10" class="sliIndex">Vue小练习</li>
 				<span class="sliIndexRed"></span>
 			</ul>
 			<footer>
@@ -262,6 +263,22 @@
 				</div>
 			</section>
 		</section>
+		<section class="page swiper-slide">
+			<div class="background-radius"></div>
+			<section class="demo">
+				<div class="demoLogo">
+					<div class="demo0 demo10img"></div>
+				</div>
+				<div class="text">
+					<div class="title">
+						<a href="demo/demo10/index.html">Vue小练习</a>
+					</div>
+					<div class="content">
+						通过小练习来巩固基础
+					</div>
+				</div>
+			</section>
+		</section>
 	</section>
 	<div class="swiper-pagination"></div>
 </div>
@@ -315,11 +332,15 @@
 			<a href="demo/demo9/index.html"></a>
 			<div class="title">demo9</div>
 		</div>
+		<div class="mobDemo">
+			<a href="demo/demo10/index.html"></a>
+			<div class="title">demo10</div>
+		</div>
 	</div>
 </div>
 
 <script>   
-let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54','#4ecd00','#FFD161','#00bcd4'];
+let color = ['#f03','#00C470','#FF3854','#00A8FF','#FF70A8','#FFC41C','#CC1C54','#4ecd00','#FFD161','#00bcd4'，'#00A800'];
 
 
 document.onreadystatechange = function () {//即在加载的过程中执行下面的代码
@@ -404,6 +425,9 @@ $('#sliIndex8').click(function(){
   });
 $('#sliIndex9').click(function(){
     mySwiper.slideTo(9, 1000, false);
+  });
+$('#sliIndex10').click(function(){
+    mySwiper.slideTo(10, 1000, false);
   });
 
 
